@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 1.0
+
+[node name="Hinge" type="StaticBody2D"]
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Pin" type="PinJoint2D" parent="Collision"]
+node_a = NodePath("../..")
+bias = 0.9
+softness = 6.97
